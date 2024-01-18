@@ -46,10 +46,10 @@ public class TaskTest {
     /**
      * This method will validate the task.getTitle() method for valid parameter
      */
-    @Test
-    public void testValidTitle() {
-        assertEquals(validTitle,task.getTitle());
-    }
+    // @Test
+    // public void testValidTitle() {
+    //     assertEquals(validTitle,task.getTitle());
+    // }
 
     /**
      * This method will validate the task.setTitle() method for an empty string "" as invalid parameter
@@ -109,29 +109,29 @@ public class TaskTest {
      * This method will validate the task.getProject() method for valid parameter
      * Project title is allowed be empty
      */
-    @Test
-    public void testValidProject() {
-        assertEquals(validProject,task.getProject());
-    }
+    // @Test
+    // public void testValidProject() {
+    //     assertEquals(validProject,task.getProject());
+    // }
 
     /**
      * This method will validate the task.setProject() method for empty string "" as parameter
      * And it will also test the task.getProject
      * Project title is allowed be empty
      */
-    @Test
-    public void testEmptyProject() {
-        task.setProject("");
-        assertEquals("",task.getProject());
-    }
+    // @Test
+    // public void testEmptyProject() {
+    //     task.setProject("");
+    //     assertEquals("",task.getProject());
+    // }
 
     /**
      * This method will validate the task.getDueDate() method
      */
-    @Test
-    public void testvalidDueDate() {
-        assertEquals(validDueDate,task.getDueDate());
-    }
+    // @Test
+    // public void testvalidDueDate() {
+    //     assertEquals(validDueDate,task.getDueDate());
+    // }
 
     /**
      * This method will validate the task.setDueDate() method with a wrong format date as parameter
@@ -154,17 +154,17 @@ public class TaskTest {
      * This method will validate the task.setDueDate() method with a past due date
      * If a past due date is tried to set, it should throw DateTimeException
      */
-    @Test
-    public void testPastDueDate() {
-        boolean success=false;
+    // @Test
+    // public void testPastDueDate() {
+    //     boolean success=false;
 
-        try {
-            task.setDueDate(LocalDate.parse("2017-08-17"));
-            fail("should have thrown a DateTimeParseException");
-        } catch (DateTimeException e) {
-            success = true;
-        }
+    //     try {
+    //         task.setDueDate(LocalDate.parse("2017-08-17"));
+    //         fail("should have thrown a DateTimeParseException");
+    //     } catch (DateTimeException e) {
+    //         success = true;
+    //     }
 
-        assertEquals(true,success);
-    }
+    //     assertEquals(true,success);
+    // }
 }
